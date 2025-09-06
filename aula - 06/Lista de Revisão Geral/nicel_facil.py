@@ -14,4 +14,4 @@ def imprime_num():
     for i in range(1,11):
         print(i)
     
-def cria_dicionario(chave, valor)
+#def cria_dicionario(chave, valor):
