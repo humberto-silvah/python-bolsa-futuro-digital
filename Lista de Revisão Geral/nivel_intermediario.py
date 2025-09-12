@@ -59,6 +59,7 @@ def fatorial(numero):
         resultado *= i
     return resultado
 
+print()
 print("11ª Crie uma lista de números e calcule a soma de todos os elementos.")
 calcula=[1,5,2,6,7]
 print(calcula_lista(calcula),"\n")

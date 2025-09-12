@@ -51,7 +51,8 @@ def meu_while(tamanho):
 def produtos(produtos,precoes):
     cria_dicionario(produtos,precoes)
     print(produtos)
-    
+
+print()   
 print("1ª Crie uma lista com os números de 1 a 5 e imprima cada elemento.")
 numeros=[1,2,3,4,5]
 varre_lista(numeros)
