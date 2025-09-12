@@ -1,7 +1,29 @@
+<<<<<<< HEAD
+def varre_lista(lista):
+    for elemento in range(len(lista)):
+        print (elemento)
+=======
 def varre_lista(lista):
     for elemento in lista:
         print (elemento)
+>>>>>>> 2666cc34fccc3beda93fffd21ede0a11abcc2e3a
 
+<<<<<<< HEAD
+def verifica_p_n(numero):
+    if (numero == 0):
+        print("nulo")
+    elif (numero > 0):
+        print(numero,"é positivo")
+    else:
+        print("é negativo")
+
+def imprime_num():
+    for i in range(1,11):
+        print(i)
+    
+#def cria_dicionario(chave, valor):
+
+=======
 def verifica_p_n(numero):
     if (numero == 0):
         print(numero,"nulo")
@@ -92,3 +114,4 @@ itens=["caneta","livro", "borracha"]
 precoes=[2.5,199,2.5]
 print(cria_dicionario(itens,precoes))
 produtos(itens,precoes)
+>>>>>>> 2666cc34fccc3beda93fffd21ede0a11abcc2e3a

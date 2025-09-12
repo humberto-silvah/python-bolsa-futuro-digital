@@ -25,25 +25,89 @@ def tabuada(inicio, fim):
 def verifica_maior_da_lista(lista):
     return max(lista)
 
-print("Crie uma lista de números e calcule a soma de todos os elementos.")
-numeros=[1,5,2,6,7]
-print(calcula_lista(numeros))
+def contar_frequencia(palavra):
+    frequencia = {}
+    for letra in palavra:
+       
+        letra = letra.lower()
+        if letra.isalpha():
+            if letra in frequencia:
+                frequencia[letra] += 1
+            else:
+                frequencia[letra] = 1
+    return frequencia
 
-print(" Crie um dicionário onde cada chave é um nome e o valor é uma tupla com (idade, cidade).")
+
+def teste_polindromo(palavra):
+    frase = palavra.replace(" ", "").lower()
+
+    if frase == frase[::-1]:
+        print(f"{palavra}, é Polindromo")
+    else:
+        print(f"{palavra}, não é Polimbromo")
+
+def imprime_par(inicio,fim):
+    par = []
+    for i in range(inicio,fim + 1):
+        if (i % 2 == 0):
+            par.append(i)
+    return par
+
+def fatorial(numero):
+    resultado = 1
+    for i in range(1, numero+1):
+        resultado *= i
+    return resultado
+
+print("11ª Crie uma lista de números e calcule a soma de todos os elementos.")
+calcula=[1,5,2,6,7]
+print(calcula_lista(calcula),"\n")
+
+print("12ª Crie um dicionário onde cada chave é um nome e o valor é uma tupla com (idade, cidade).")
 nomes=["maria", "joao", "pedro"]
 idades=[20,22,30]
 cidades=["Campina Grande","Patos","Joao Pessoa"]
-print(dicionario_tupla(nomes,idades,cidades))
+print(dicionario_tupla(nomes,idades,cidades),"\n")
 
-print("Classifique um número como 'pequeno' (<10), 'médio' (10-50) ou 'grande' (>50).")
+print("13ª Classifique um número como 'pequeno' (<10), 'médio' (10-50) ou 'grande' (>50).")
 classifica_tamanho(-1)
 classifica_tamanho(11)
 classifica_tamanho(51)
+print()
 
-print("mprima uma tabuada de 1 a 5 (ex: 1x1=1, 1x2=2, etc.).")
+print("14ª mprima uma tabuada de 1 a 5 (ex: 1x1=1, 1x2=2, etc.).")
 tabuada(3,4)
+print()
+print("15ª Crie uma função que recebe uma lista e retorna o maior número.")
+maior=[2,5,8,9.9,10,70]
+print(verifica_maior_da_lista(maior),"\n")
 
-print("Crie uma função que recebe uma lista e retorna o maior número.")
-numeros=[2,5,8,9.9,10,70]
-print(verifica_maior_da_lista(numeros))
+print("16ª Conte a frequência de cada letra em uma palavra (ex: 'hello' → {'h':1, 'e':1, 'l':2, 'o':1}).")
+print(contar_frequencia("Hello World"),"\n")
+
+print("17ª Crie uma lista de dicionários representando livros (título, autor, ano) e imprima todos.")
+livros=["O Senhor dos Anéis",
+        "A Guerra dos Tronos",
+        "1984",
+        "O Guia do Mochileiro das Galáxias"]
+autores=["J.R.R. Tolkien",
+         "George R.R. Martin",
+         "George Orwell",
+         "Douglas Adams"]
+ano=[1954,1996,1949,1979]
+print(dicionario_tupla(livros,autores,ano),"\n")
+
+print("18ª Verifique se uma string é um palíndromo")
+teste_polindromo("Hello Wrod")
+teste_polindromo("ana")
+print()
+
+print("19ª Imprima apenas os números pares entre 1 e 20.")
+print(imprime_par(1,20),"\n")
+
+print("20ª Crie uma função recursiva para calcular o fatorial de um número.")
+print(fatorial(5),"\n")
+
+
+
 

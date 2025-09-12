@@ -52,42 +52,49 @@ def produtos(produtos,precoes):
     cria_dicionario(produtos,precoes)
     print(produtos)
     
-print("Crie uma lista com os números de 1 a 5 e imprima cada elemento.")
+print("1ª Crie uma lista com os números de 1 a 5 e imprima cada elemento.")
 numeros=[1,2,3,4,5]
 varre_lista(numeros)
+print()
 
-print("Peça um número ao usuário e verifique se é positivo, negativo ou zero.")
+print("2ª Peça um número ao usuário e verifique se é positivo, negativo ou zero.")
 num1= -7 
 num2= 10 
 num3= 0
 verifica_p_n(num1), verifica_p_n(num2), verifica_p_n(num3)
+print()
 
-print("Use um loop `for` para imprimir os números de 1 a 10.")
+print("3ª Use um loop `for` para imprimir os números de 1 a 10.")
 imprime_num(1,10)
+print()
 
-print("Crie um dicionário com nomes e idades de 3 pessoas e imprima cada par")
+print("4ª Crie um dicionário com nomes e idades de 3 pessoas e imprima cada par")
 chave_nomes= ["ana","pedro","julia"]
 valor_idades =[18,22,39]
-print(cria_dicionario(chave_nomes,valor_idades))
+print(cria_dicionario(chave_nomes,valor_idades),"\n")
 
-print("Crie uma função que recebe dois números e retorna a soma.")
-print(soma(20,5))
+print("5ª Crie uma função que recebe dois números e retorna a soma.")
+print(soma(20,5),"\n")
 
-print("Peça uma palavra ao usuário e imprima o número de caracteres.")
+print("6ª Peça uma palavra ao usuário e imprima o número de caracteres.")
 contator_letras("pneumoultramicroscopicossilicovulcanoconiose")
+print()
 
-print("Crie uma lista com 3 frutas e adicione uma nova fruta.")
+print("7ª Crie uma lista com 3 frutas e adicione uma nova fruta.")
 feira=["abacate","banana","caju"]
-add_elemento(feira,"uva")
 print(feira)
+add_elemento(feira,"uva")
+print(feira,"\n")
 
-print("Verifique se um número é par ou ímpar.")
+print("8ª Verifique se um número é par ou ímpar.")
 par_impar(2), par_impar(999), par_impar(0)
+print()
 
-print("Use um loop `while` para imprimir números de 1 a 5.")
+print("9ª Use um loop `while` para imprimir números de 1 a 5.")
 meu_while(5)
+print()
 
-print("Crie um dicionário de produtos e preços, depois imprima apenas os produtos.")
+print("10ª Crie um dicionário de produtos e preços, depois imprima apenas os produtos.")
 itens=["caneta","livro", "borracha"]
 precoes=[2.5,199,2.5]
 print(cria_dicionario(itens,precoes))
