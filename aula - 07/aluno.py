@@ -7,4 +7,5 @@ class Aluno:
 
     def verifica_aprovacao():
         
-        if (self.nota <=6) 
+        if (self.nota <=6):
+            print("Aprovado")
