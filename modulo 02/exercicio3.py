@@ -1,6 +1,4 @@
-from abc import ABC, abstractmethod
-
-class Funcionario(ABC):
+class Funcionario():
 
     def __init__(self, nome, salario):
         self.nome = nome
