@@ -5,9 +5,7 @@ class Cliente:
         self.contas = []
 
     def realizar_transacao(self, conta, transacao):
-        #IMPLEMENTAR
         pass
 
-    def adicionar_conta(self, conta):
-        
+    def adicionar_conta(self, conta):       
         pass

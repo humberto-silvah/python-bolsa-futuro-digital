@@ -1,4 +1,6 @@
 from models.Historico import Historico
+from models.Saque import Saque
+from models.Deposito import Deposito
 
 class Conta:
     def __init__(self, numero, cliente):
@@ -7,6 +9,7 @@ class Conta:
         self._agencia = "0001"
         self._cliente = cliente
         self._historico = Historico()
+        
 
     @classmethod
     def nova_conta(cls, cliente, numero):
@@ -51,3 +54,22 @@ class Conta:
             return False
 
         return True
+    
+    def realizar_transacao(self, Transacao): #implementar
+        if isinstance(Transacao, Saque):
+            sucesso_transacao = self.sacar(Transacao.valor)
+        elif isinstance(Transacao, Deposito):
+            sucesso_transacao = self.depositar(Transacao.valor)
+        else:
+            print("\n@@@ Operação falhou! Tipo de transação inválida. @@@")
+            return False
+        if sucesso_transacao:
+            self.historico.adicionar_transacao( {
+                "tipo": Transacao.__class__.__name__,
+                "valor": Transacao.valor,
+                "data": Transacao.data.strftime("%d-%m-%Y %H:%M:%S")
+            } )
+            return True
+        return False
+        
+   

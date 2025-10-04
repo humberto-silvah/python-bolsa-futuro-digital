@@ -9,6 +9,6 @@ class Historico:
         return self._transacoes
 
     
-    def adicionar_transacao(self, transacao): # implementar
-        self.transacoes = transacao
-        return self.transacoes    
+    def adicionar_transacao(self, transacao):
+        self._transacoes.append(transacao)
+        return True

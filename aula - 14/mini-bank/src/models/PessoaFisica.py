@@ -1,4 +1,3 @@
-
 from models.Cliente import Cliente
 
 class PessoaFisica(Cliente):
