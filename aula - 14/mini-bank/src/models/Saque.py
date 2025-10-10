@@ -9,7 +9,8 @@ class Saque(Transacao):
         return self._valor
 
     def registrar(self, conta):
-            if conta.sacar(self.valor):
-                conta.historico.adicionar_transacao(self)
-                return True
-            return False
+        sucesso_transacao = conta.sacar(self.valor)
+
+        if sucesso_transacao:
+            conta.historico.adicionar_transacao(self)
+

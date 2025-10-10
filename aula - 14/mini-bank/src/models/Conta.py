@@ -1,6 +1,4 @@
 from models.Historico import Historico
-from models.Saque import Saque
-from models.Deposito import Deposito
 
 class Conta:
     def __init__(self, numero, cliente):
@@ -9,7 +7,6 @@ class Conta:
         self._agencia = "0001"
         self._cliente = cliente
         self._historico = Historico()
-        
 
     @classmethod
     def nova_conta(cls, cliente, numero):
@@ -35,14 +32,21 @@ class Conta:
     def historico(self):
         return self._historico
 
-    def sacar(self, valor): #implementar
-        if (self.saldo >= 0) and (valor >= 0):
+    def sacar(self, valor):
+        saldo = self.saldo
+        excedeu_saldo = valor > saldo
+
+        if excedeu_saldo:
+            print("\n@@@ Operação falhou! Você não tem saldo suficiente. @@@")
+
+        elif valor > 0:
             self._saldo -= valor
             print("\n=== Saque realizado com sucesso! ===")
+            return True
+
         else:
             print("\n@@@ Operação falhou! O valor informado é inválido. @@@")
-            return False
-        
+
         return False
 
     def depositar(self, valor):
@@ -54,22 +58,3 @@ class Conta:
             return False
 
         return True
-    
-    def realizar_transacao(self, Transacao): #implementar
-        if isinstance(Transacao, Saque):
-            sucesso_transacao = self.sacar(Transacao.valor)
-        elif isinstance(Transacao, Deposito):
-            sucesso_transacao = self.depositar(Transacao.valor)
-        else:
-            print("\n@@@ Operação falhou! Tipo de transação inválida. @@@")
-            return False
-        if sucesso_transacao:
-            self.historico.adicionar_transacao( {
-                "tipo": Transacao.__class__.__name__,
-                "valor": Transacao.valor,
-                "data": Transacao.data.strftime("%d-%m-%Y %H:%M:%S")
-            } )
-            return True
-        return False
-        
-   

@@ -1,4 +1,5 @@
 from models.Transacao import Transacao
+from models.Conta import Conta
 
 class Deposito(Transacao):
     def __init__(self, valor):
@@ -8,8 +9,8 @@ class Deposito(Transacao):
     def valor(self):
         return self._valor
 
-    def registrar(self, conta):
-        if conta.depositar(self.valor):
+    def registrar(self, conta: Conta):
+        sucesso_transacao = conta.depositar(self.valor)
+
+        if sucesso_transacao:
             conta.historico.adicionar_transacao(self)
-            return True
-        return False

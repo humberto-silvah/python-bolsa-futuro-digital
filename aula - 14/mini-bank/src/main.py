@@ -15,7 +15,7 @@ def menu():
     [5]\tNova conta
     [6]\tListar contas
     [7]\tSair
-
+    
     ======================================
 
     => """
@@ -32,8 +32,46 @@ def recuperar_conta_cliente(cliente):
         print("\n@@@ Cliente não possui conta! @@@")
         return
 
-    #FIXME: não permite cliente escolher a conta
+    # FIXME: não permite cliente escolher a conta
     return cliente.contas[0]
+
+
+def depositar(clientes):
+    transacao_valida(clientes, "Informe o valor do depósito: ", Deposito)
+    # cpf = input("Informe o CPF do cliente: ")
+    # cliente = filtrar_cliente(cpf, clientes)
+
+    # if not cliente:
+    #     print("\n@@@ Cliente não encontrado! @@@")
+    #     return
+
+    # valor = float(input("Informe o valor do depósito: "))
+    # transacao = Deposito(valor)
+
+    # conta = recuperar_conta_cliente(cliente)
+    # if not conta:
+    #     return
+
+    # cliente.realizar_transacao(conta, transacao)
+
+
+def sacar(clientes):
+    transacao_valida(clientes, "Informe o valor do saque: ", Saque)
+    # cpf = input("Informe o CPF do cliente: ")
+    # cliente = filtrar_cliente(cpf, clientes)
+
+    # if not cliente:
+    #     print("\n@@@ Cliente não encontrado! @@@")
+    #     return
+
+    # valor = float(input("Informe o valor do saque: "))
+    # transacao = Saque(valor)
+
+    # conta = recuperar_conta_cliente(cliente)
+    # if not conta:
+    #     return
+
+    # cliente.realizar_transacao(conta, transacao)
 
 def transacao_valida(clientes, input_valor, valor_transacao):
 
@@ -52,13 +90,6 @@ def transacao_valida(clientes, input_valor, valor_transacao):
         return
 
     cliente.realizar_transacao(conta, transacao)
-
-def depositar(clientes):
-    transacao_valida(clientes, "Informe o valor do depósito: ", Deposito)
-
-def sacar(clientes):
-    transacao_valida(clientes, "Informe o valor do saque: ", Saque)
-
 
 def exibir_extrato(clientes):
     cpf = input("Informe o CPF do cliente: ")
@@ -131,7 +162,7 @@ def listar_contas(contas):
 
 
 def main():
-    clientes = []
+    clientes = [] 
     contas = []
 
     while True:
@@ -164,3 +195,6 @@ def main():
 
 
 main()
+
+
+print("=== Obrigado por usar nosso sistema! ===")
