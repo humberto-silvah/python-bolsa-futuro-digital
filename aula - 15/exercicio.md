@@ -8,7 +8,7 @@
 
 2. **Pense em um problema que poderia acontecer se as informações fossem guardadas em arquivos simples.**
 
-    R= Falta de sugurança e integridade de dados, Facil de conromper levando até a perda de dados 
+    R= Falta de sugurança e integridade de dados, Facil de corromper levando até a perda de dados 
 
 3. **Explique, com suas palavras, por que os bancos de dados são importantes.**
 
