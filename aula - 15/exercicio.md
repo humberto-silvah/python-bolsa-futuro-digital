@@ -3,6 +3,7 @@
 **Exerciocio**
 
 1. **Dê um exemplo do dia a dia em que você acha que há um banco de dados por trás.**
+
     R= Google
 
 2. **Pense em um problema que poderia acontecer se as informações fossem guardadas em arquivos simples.**
